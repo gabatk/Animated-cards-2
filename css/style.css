@@ -84,3 +84,46 @@ h3 {
     transform: rotateY(-180deg);
     opacity: 0;
 }
+
+.card:hover .three {
+    animation: up .8s linear;
+}
+
+.card:hover .text-three {
+    animation: down .8s linear;
+}
+
+@keyframes up {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateY(-60%);
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes down {
+    0% {
+        transform: translateY(0);
+        z-index: -1;
+    }
+
+    50% {
+        transform: translateY(60%);
+        z-index: -1;
+    }
+
+    100% {
+        z-index: 1;
+    }
+}
